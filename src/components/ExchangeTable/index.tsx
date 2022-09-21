@@ -12,20 +12,24 @@ const Table: React.FC<ITable> = ({ exchanges }) => {
 
   return (
     <div className="container">
-      <table data-cy="table">
-        <thead>
-          <tr>
-            {rows.map(item => {
-              return <th key={`header-${item}`}>{item}</th>
-            })}
-          </tr>
-        </thead>
-        <tbody>
-          {exchanges.map(item => (
-            <ExchangeItem key={`${item.id}`} item={item} />
-          ))}
-        </tbody>
-      </table>
+      {
+        exchanges.length == 0 ?
+          <h1>loading...</h1> :
+          <table data-cy="table">
+            <thead>
+              <tr>
+                {rows.map(item => {
+                  return <th key={`header-${item}`}>{item}</th>
+                })}
+              </tr>
+            </thead>
+            <tbody>
+              {exchanges.map(item => (
+                <ExchangeItem key={`${item.id}`} item={item} />
+              ))}
+            </tbody>
+          </table>
+      }
     </div>
   )
 }
