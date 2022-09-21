@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { API_ENDPOINT } from './constants'
 import { IExchange } from './constants/types'
 
+import Home from './pages/Home'
+
 const App = () => {
   const [exchanges, setExchanges] = useState<IExchange[]>([])
 
@@ -25,7 +27,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<div> InitialPage </div>} />
+        <Route path="/" element={<Home exchanges={exchanges} />} />
       </Routes>
     </BrowserRouter>
   )

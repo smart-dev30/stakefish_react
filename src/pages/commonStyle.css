@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: bisque;
+  border: 1px solid antiquewhite;
+  margin-top: 30px;
+}
+
+.btn:hover {
+  background-color: bisque;
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.mobile-card {
+  width: 80%;
+  border: 2px solid antiquewhite;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.mobile-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
